@@ -1,8 +1,11 @@
 
 const randomNumberEL = document.querySelector("#random-number");
-randomNumberEL.addEventListener("click" , () =>{
-    document.querySelector("#result").textContent = Math.floor(
-     getRandomNumber(1, 100)   
+const resultEL = document.querySelector("#result");
+const min = document.querySelector("#min");
+const max = document.querySelector("#max");
+randomNumberEL.addEventListener("click" , () => {
+    resultEL.textContent = Math.floor(
+     getRandomNumber(Number(min.value), Number(max.value) + 1)   
     );
 });
 
